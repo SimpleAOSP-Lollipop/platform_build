@@ -1507,6 +1507,13 @@ ifeq ($(CHANGELOG),true)
 	$(hide) mv $(PRODUCT_OUT)/Changelog.txt $(PRODUCT_OUT)/$(TARGET_PRODUCT)-Changelog.txt
 endif
 
+ifeq ($(USE_PREBUILT_CHROMIUM),1)
+ifneq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+	@echo -e ${CL_GRN}"Running Chromium prebuilt setup script..."${CL_RST}
+	$(hide) . $(TOPDIR)vendor/simpleaosp/utils/chromium_prebuilt.sh $(TOP)
+endif
+endif
+
 endif    # recovery_fstab is defined
 endif    # TARGET_NO_KERNEL != true
 endif    # TARGET_DEVICE != generic*
