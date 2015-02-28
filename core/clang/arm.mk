@@ -23,6 +23,12 @@ CLANG_CONFIG_arm_UNKNOWN_CFLAGS := \
   -fno-strict-volatile-bitfields \
   -fno-align-jumps \
   -Wa,--noexecstack \
+  -Wno-unused-local-typedefs \
+  -fpredictive-commoning \
+  -ftree-loop-distribute-patterns \
+  -fvect-cost-model \
+  -ftree-partial-pre \
+  -fipa-cp-clone \
   -mvectorize-with-neon-quad
 
 define subst-clang-incompatible-arm-flags
