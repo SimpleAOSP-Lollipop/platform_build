@@ -51,12 +51,18 @@ LOCAL_DISABLE_STRICT := \
 	libc_openbsd \
 	libc \
 	libc_nomalloc \
+        libc_malloc \
 	patchoat \
 	dex2oat \
 	libart \
 	libart-compiler \
 	oatdump \
-	libart-disassembler
+	libart-disassembler \
+        camera.msm8084 \
+        libstlport_static \
+        mm-vdec-omx-test \
+        sensors.flounder \
+        libnvvisualizer
 
 LOCAL_FORCE_DISABLE_STRICT := \
 	libziparchive-host \
